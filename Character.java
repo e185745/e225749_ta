@@ -51,9 +51,9 @@ public abstract class Character {
         hp += recoverd;
      }
 
-     void isDeath(boolean isdeath) {
+     void isDeath() {
         if(hp<=0){
-            isdeath = true;
+            this.isdeath = true;
         }
      }
     //影響を与える可能性のあるオブジェクトの参照を引数として受け取る

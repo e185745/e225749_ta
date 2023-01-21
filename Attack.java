@@ -15,6 +15,7 @@ class Attack implements Action {
         target.damaged(executer.getAttack());
         System.out.println(executer.getName() + "のこうげき!!");
         System.out.println(executer.getName() + "は" + target.getName() + "に" + executer.getAttack() + "ポイントのダメージをあたえた!");
+        target.isDeath();
      }
      
  }
