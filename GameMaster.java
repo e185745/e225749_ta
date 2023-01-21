@@ -4,11 +4,12 @@ public class GameMaster {
    ArrayList<Character> order = new ArrayList<>();
    ArrayList<Character> players = new ArrayList<>();
    ArrayList<Character> enemys = new ArrayList<>();
-   private int pdeath = 0;
-   private int edeath = 0;
+   private boolean pdeath = false;
+   private boolean edeath = false;
 
-   int getPdeath(){return pdeath;}
-   int getEdeath(){return edeath;}
+   boolean getPdeath(){return pdeath;}
+   boolean getEdeath(){return edeath;}
+
    
 
    GameMaster() {
@@ -69,7 +70,14 @@ public class GameMaster {
    }
 
    boolean isDeath(){
-    return players.get(0).getIsdeath() || enemys.get(0).getIsdeath();
+    if(players.get(0).getIsdeath()){
+        System.out.printf("%sは倒れてしまった。",players.get(0).getName());
+        return players.get(0).getIsdeath();
+    }else if(enemys.get(0).getIsdeath()){
+        System.out.printf("%sを倒した。",enemys.get(0).getName());
+        return enemys.get(0).getIsdeath();
+    }
+    return false;
    }
    /*void pisDeath(){
     if(players.get(1).getIsdeath() == true){
