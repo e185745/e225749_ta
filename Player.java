@@ -57,8 +57,9 @@ public class Player extends Character {
         }
         var target_number = command_selector.waitForUsersCommand("ターゲット？");
 
-
-        actionlist.get(command_number).execute(this, targets.get(target_number));
+        if (getIsdeath() == false){
+            actionlist.get(command_number).execute(this, targets.get(target_number));
+        }
     }
  
 }

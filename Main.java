@@ -3,12 +3,9 @@ public class Main {
     public static void main(String[] args) {
         var master = new GameMaster();
    
-        for(var i=0; i<3; i++) {
+        while(master.isDeath() == false) {
              master.showStatus();
              master.battle();
-             if(master.isDeath() == true){
-                break;
-            }
          }
 
     } 

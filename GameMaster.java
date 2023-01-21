@@ -69,7 +69,7 @@ public class GameMaster {
    }
 
    boolean isDeath(){
-    return players.get(0).getIsdeath();
+    return players.get(0).getIsdeath() || enemys.get(0).getIsdeath();
    }
    /*void pisDeath(){
     if(players.get(1).getIsdeath() == true){

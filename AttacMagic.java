@@ -21,7 +21,6 @@ class AttackMagic implements Action {
         target.damaged(attack); 
         executer.comsumeMp(consumption);
         System.out.println(target.getName()+"に"+attack+"ポイントのダメージをあたえた!!");
-        target.isDeath();
     }
  }
  

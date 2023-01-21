@@ -21,8 +21,13 @@ public class Enemy extends Character {
         var rand = new Random();
         int index = rand.nextInt(actionlist.size()); //ランダムに選択されたインデクス
         var selected_action = actionlist.get(index);
-
-        selected_action.execute(this, targets.get(0));
+        
+        if (getIsdeath() == false && targets.get(0).getIsdeath() == false){
+            selected_action.execute(this, targets.get(0));
+        }
+        
+        
+        
         //actionlist.get(0).execute(this, targets.get(0));
     }
  }

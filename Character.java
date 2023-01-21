@@ -41,6 +41,9 @@ public abstract class Character {
  
     void damaged(int damage) {
         hp -= damage;
+        if(hp<=0){
+            this.isdeath = true;
+        }
      }
      
      void comsumeMp(int comsumemp) {
@@ -50,12 +53,14 @@ public abstract class Character {
      void recover(int recoverd){
         hp += recoverd;
      }
-
-     void isDeath() {
+     /*
+      * void isDeath() {
         if(hp<=0){
             this.isdeath = true;
         }
      }
+      */
+     
     //影響を与える可能性のあるオブジェクトの参照を引数として受け取る
     abstract void act(ArrayList<Character> targets); //サブクラスで定義する
     /*public Collection<? extends Action> getActions() {

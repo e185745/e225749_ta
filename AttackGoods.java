@@ -16,6 +16,5 @@ public class AttackGoods extends Goods {
         System.out.println(executer.getName() + "は" + name() + "をつかった！");
         target.damaged(value);
         System.out.println(executer.getName() + "は" + target.getName() + "に" + value + "ポイントのダメージをあたえた!");
-        target.isDeath();
     }
  }
